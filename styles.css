@@ -1,7 +1,13 @@
 /* common styles */
-
+h1{
+    font-weight: 600;
+    font-size: 3rem;
+}
 h5{
-    font-size: 1.2rem;
+    font-size: 1.25rem;
+}
+.white{
+    color: #fff;
 }
 .gray{
     color: #8987A1;
@@ -17,6 +23,7 @@ h5{
     background-color: #E95A08;
     padding: 5% 25%;
     border: none;
+    cursor: pointer;
 }
 /* nav */
 nav{
@@ -43,11 +50,6 @@ nav{
 .banner-content{
     display: flex;
 }
-
-.banner-text h1{
-    font-weight: 600;
-    font-size: 3rem;
-}
 .banner{
     display: flex;
    align-items: last baseline;
@@ -62,6 +64,7 @@ nav{
 .plant-section{
     margin: auto;
     max-width: 1140px;
+   
 }
 .plant-text {
     text-align: center;
@@ -80,6 +83,7 @@ nav{
 }
 /* plant-lover-section */
 .plant-lover-section{
+    position: relative;
     display: flex;
     justify-content: space-between;
     max-width: 1140px;
@@ -87,29 +91,90 @@ nav{
     padding: auto;
 }
 .plant-lover-section img{
-max-height: 600px;
+max-height: 490px;
 max-width: 460px;
 position: relative;
 }
-.badge{
-    width: 280px;
-    height: 280px;
-   place-content: calc(-30,-50);
-   
-}
+
 .plant-lover-text{
     text-align: left;
- 
+    padding-left: 5%;
 }
+
 .plant-lover-text h1{
     font-weight: 700;
     font-size: 3rem;
-    margin-left: 5%;
 }
+
  .listed-text{
     font-weight: 400;
    font-size: 1.5rem;
+ 
 }
+/* .badge img{
+    width: 300px;
+    height: 300px; 
+}
+.badge{
+    transform: translate(30%,60%);
+    margin-top: 0; */
+
+.latest-deal{
+    text-align: center;
+}
+/* collage-section */
+.collage-section{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 10px;
+     margin: 5% auto;
+    padding: 10px;
+    max-width: 1140px;
+}
+.left-column{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 5px;
+}
+.shop-img{
+      position: relative;
+      border-radius: 10px;
+      overflow: hidden;
+}
+.text-overlay{
+    position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+   text-align: center;
+}
+/* subscribe-section */
+.subscribe-section{
+    background-image: url(./assets/news-letter-bg.png);
+    text-align: center;
+    padding: 60px 20px;
+    color: #fff;
+}
+ .subscribe-form {
+      display: flex;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+  .subscribe-form input {
+      flex: 1;
+      padding: 10px;
+      border: none;
+      border-radius: 5px 0 0 5px;
+      font-size: 1rem;
+    }
+ .subscribe-form button{
+     padding: 10px 20px;
+      border-radius: 0 5px 5px 0;
+      font-size: 1rem;
+ }
+
 /* responsive */
 @media screen and (max-width: 576px) {
     .nav , .navlink , .banner{
@@ -132,4 +197,12 @@ position: relative;
     .plant-lover-section{
         flex-direction: column;
     }
+   .collage-section{
+    grid-template-columns: 1fr;
+   }
+   .shop-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+   }
 }

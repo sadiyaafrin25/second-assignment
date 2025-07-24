@@ -111,13 +111,18 @@ position: relative;
    font-size: 1.5rem;
  
 }
-/* .badge img{
-    width: 300px;
-    height: 300px; 
+.badge img{
+    width: 260px;
+    height: 260px;
+    display: block; 
+  
 }
 .badge{
-    transform: translate(30%,60%);
-    margin-top: 0; */
+    position: absolute;
+    top: -90px;
+    left: 280px;
+
+}
 
 .latest-deal{
     text-align: center;
@@ -174,7 +179,17 @@ position: relative;
       border-radius: 0 5px 5px 0;
       font-size: 1rem;
  }
+/* footer-content */
+.footer-content{
+    display: flex;
+    justify-content: space-around;
+    padding: 30px;
 
+}
+.home-content ul , .features ul{
+    list-style: none;
+
+}
 /* responsive */
 @media screen and (max-width: 576px) {
     .nav , .navlink , .banner{
@@ -194,7 +209,7 @@ position: relative;
         display: grid;
         grid-template-columns: repeat(2,2fr);
     }
-    .plant-lover-section{
+    .plant-lover-section , .footer-content{
         flex-direction: column;
     }
    .collage-section{

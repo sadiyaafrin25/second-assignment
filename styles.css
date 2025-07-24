@@ -1,4 +1,8 @@
 /* common styles */
+
+h5{
+    font-size: 1.2rem;
+}
 .gray{
     color: #8987A1;
 }
@@ -7,6 +11,12 @@
 }
 .orange{
     color: #E95A08;
+}
+.btn{
+    color: #fff;
+    background-color: #E95A08;
+    padding: 5% 25%;
+    border: none;
 }
 /* nav */
 nav{
@@ -32,33 +42,94 @@ nav{
 /* banner */
 .banner-content{
     display: flex;
- justify-content: center;
- align-items: flex-end;
 }
-.banner-text{
-    text-align: center;
-    align-content: baseline;
 
-}
 .banner-text h1{
     font-weight: 600;
     font-size: 3rem;
 }
 .banner{
     display: flex;
-    align-items: center;
+   align-items: last baseline;
     margin: 0 auto;
-    padding: auto;
     max-width: 1140px;
 }
 .banner-img{
     max-width: 50%;
-
+    max-height: 50%;
 }
+/* plant-section */
+.plant-section{
+    margin: auto;
+    max-width: 1140px;
+}
+.plant-text {
+    text-align: center;
+    margin: auto;
+   
+}
+.plant-card{
+    display: grid;
+    grid-template-columns: repeat(4,2fr);
+    gap: 30px;
+    column-gap: 20px;
+    text-align: center;
+}
+.card img{
+    max-width: 90%;
+}
+/* plant-lover-section */
+.plant-lover-section{
+    display: flex;
+    justify-content: space-between;
+    max-width: 1140px;
+    margin: 5% auto;
+    padding: auto;
+}
+.plant-lover-section img{
+max-height: 600px;
+max-width: 460px;
+position: relative;
+}
+.badge{
+    width: 280px;
+    height: 280px;
+   place-content: calc(-30,-50);
+   
+}
+.plant-lover-text{
+    text-align: left;
+ 
+}
+.plant-lover-text h1{
+    font-weight: 700;
+    font-size: 3rem;
+    margin-left: 5%;
+}
+ .listed-text{
+    font-weight: 400;
+   font-size: 1.5rem;
+}
+/* responsive */
 @media screen and (max-width: 576px) {
     .nav , .navlink , .banner{
         flex-wrap: wrap;
         flex-direction: column;
     }
-    
+    .banner{
+        flex-direction: column-reverse;
+    }
+    .navitem{
+        display: none;
+    }
+    .cart{
+        display: inherit;
+    }
+    .plant-card{
+        display: grid;
+        grid-template-columns: repeat(2,2fr);
+    }
+    .plant-lover-section{
+        flex-direction: column;
+    }
 }
